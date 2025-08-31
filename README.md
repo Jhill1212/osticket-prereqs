@@ -58,7 +58,32 @@ From this drop down menu, expand the World Wide Web Services folder, Then expand
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Now that we have done that, access the osTicket installation files that we extracted. Now we are going to install PHPManager. Double click it, hit next, agree and hit next.
+Now that we have done that, access the osTicket installation files that we extracted. Now we are going to install PHPManager. Double click it, hit next, agree and hit next. Now we are going to install the Rewrite module. Just agree and hit install. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Now we are going to make a new directory on the C-drive of your computer and we will name it "PHP". Right click the file explorer icon and click "File explorer" to open a new window for it. Go into the c-drive (This pc -> drop down menu, Windows (C:)). While here, right click and make a new folder and title it "PHP" and then open the new folder. Now go back to the osTicket files and right click the php zip file and extract it into the new folder we created.
+</p>
+<br />
+
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next we are going to install the "VC_redist" which is once again located in the osTicket installation files.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
 
