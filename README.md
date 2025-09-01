@@ -75,7 +75,7 @@ Now we are going to make a new directory on the C-drive of your computer and we 
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next we are going to install the "VC_redist" which is once again located in the osTicket installation files.
+Next we are going to install the "VC_redist" which is once again located in the osTicket installation files. Double click it and accept and install. Next we will install the "mysql" for data storage purposes. Double click it, hit next, accept then hit next and we are going to make it typical, then hit install. A new window should have appeared, hit next and choose the standard configuration and hit next, then hit next again, to avoid errors we will type "root" in both boxes then hit next, then execute.
 </p>
 <br />
 
@@ -83,7 +83,7 @@ Next we are going to install the "VC_redist" which is once again located in the 
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next we are going to open the IIS as an admin. So click the windows button and search for it, right click, run as administrator. Open the PHP manager as seen and click register new PHP version, navigate to the folder we created earlier and click on the "php-cgi.exe" file. This is our executable. Now press ok.
 </p>
 <br />
 
@@ -91,6 +91,46 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now we need to restart the server. Do so by clicking restart, stop, then start it back up again. Now we are entering the last few steps. We are going to install osTicket itself. So lets go back to that osTicket zip folder and extract it. Now you should see two folders inside of this freshly extracted one. We are going to move the "upload" folder into the "wwwroot" folder. (C: inetpub -> wwwroot) then we will rename it to "osTicket". Now we need to stop and start the IIS again.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Now on the left hand side we are going to go to sites and hit the drop down arrow, then default web site's drop down arrow, then osTicket and click that, on the right side there should be a "browse *80", click that. Now you should see the osTicket installer website but, before we get to wrapping this up lets activate some more of those permissions. Inside the IIS go back to the osTicket folder and click the PHP manager, click the Enable or disable extension button, and now enable the following [ php_imap.dll, php_intl.dll, php_opcache.dll ] And now we can go back and refresh the osTicket web page.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Now we need to delve back into some files. Navigate to the wwwroot folder, osTicket, Include, find "ost-sampleconfig.php" and rename the file "ost-config.php", then right click and go to properties, then security, then advanced, then we will disable inheritance, then we will add, select a principal, for the sake of the tutorial we will make it everyone then select full control, then apply.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Now that we finished giving osTicket some permissions we can continue its installation. Head back to the website and hit continue, for the help desk name you can input whatever you like and also use any email that you see fit. For the admin user the email must be different from the one from before. Now before we finish setting this up we need to install one more thing, so pause for now after finishing the admin user and head back to the installation folder.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+We will now be installing "HeidiSQL". Now double click it, accept, next all the way and install it. Skip once it opens or you can donate if you feel inclined, click that new button, remember that password for this should be root unless chosen otherwise, now we can press open, now right click the seal looking thing on the left side of the screen labled "Unnamed" and create a new database and name it "osTicket" and now that we have that situated we can head back to the website.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Now we can fill out the database settings with all the info we just created. in the "MySQL Database" you will put osTicket, and then root for the username and password unless you have chosen differently, then hit install now. Now we can go to your login page with the following link (http://localhost/osTicket/scp/login.php) and congratulations you have successfully installed osTicket!
 </p>
 <br />
